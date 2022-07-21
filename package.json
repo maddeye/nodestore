@@ -1,0 +1,52 @@
+{
+	"name": "nodestore",
+	"version": "1.0.0",
+	"description": "Small dependencyless state management library, which brings the Stores of sveltejs to node and other frameworks",
+	"main": "index.js",
+	"module": "index.mjs",
+	"files": [
+		"index.mjs",
+		"index.js",
+		"types/index.d.ts"
+	],
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"types": "./types/index.d.ts",
+			"import": "./index.mjs",
+			"require": "./index.js"
+		}
+	},
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -cw",
+		"test": "mocha --exit",
+		"lint": "eslint \"{src,test}/**/*.{ts,js}\""
+	},
+	"author": "Madd Eye",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/maddeye/nodestore"
+	},
+	"keywords": [
+		"state",
+		"store",
+		"statemanagement",
+		"nodestore"
+	],
+	"engines": {
+		"node": ">= 12"
+	},
+	"devDependencies": {
+		"@rollup/plugin-sucrase": "^4.0.4",
+		"@rollup/plugin-typescript": "^8.3.3",
+		"@typescript-eslint/eslint-plugin": "^5.30.7",
+		"@typescript-eslint/parser": "^5.30.7",
+		"eslint": "^8.20.0",
+		"eslint-plugin-import": "^2.26.0",
+		"mocha": "^10.0.0",
+		"rollup": "^2.77.0",
+		"typescript": "^4.7.4"
+	}
+}
